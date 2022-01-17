@@ -50,7 +50,7 @@ function App() {
                     <div class="w-4/5 mt-10 border-b border-gray-400"/>
                     {/*Download Page*/}
                     <span className="mt-10 font-bold text-5xl mb-5">Downloads</span>
-                    <a href="/workshop/Build/Windows Build.zip"
+                    <a href="/workshop/Windows Build.zip"
                        class="mt-5 rounded-full bg-black text-white p-5 flex flex-row items-center justify-center"
                        download>
                         <img src="/workshop/Windows logo.svg" class="
