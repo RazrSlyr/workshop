@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
+import {faTimes} from '@fortawesome/free-solid-svg-icons'
 
 
 function TopBar(props) {
@@ -15,12 +15,10 @@ function TopBar(props) {
     let topBarClass = "h-16 w-full fixed flex flex-row items-center justify-left bg-gradient-to-r from-black to-gray-600 transition-all" +
         (props.sidebar ? " ml-48" : "")
 
-    let sideBarClass = "fixed flex flex-col justify-center h-full bg-black transition-all " +
+    let sideBarClass = "fixed flex flex-col justify-center h-full bg-black transition-all bg-gradient-to-b from-black to-gray-600 " +
         (props.sidebar ? "w-48" : "w-0")
 
     let icon = props.sidebar ? faTimes : faBars;
-
-
 
 
     return (
@@ -31,10 +29,9 @@ function TopBar(props) {
                     hover:text-4xl transition-all"
                     onClick={() => toggleSidebar()}
                 >
-                    <FontAwesomeIcon icon={icon} />
+                    <FontAwesomeIcon icon={icon}/>
                 </button>
                 <div class="pl-5 text-white text-2xl">Workshop Game</div>
-                <button className="p-5 w-40 text-white" onClick={props.scrollTo}>Press me</button>
             </div>
             <div class={sideBarClass}>
 
