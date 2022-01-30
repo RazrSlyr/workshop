@@ -10,7 +10,7 @@ function App() {
 
 
     function toGame() {
-        gameRef.current.scrollIntoView()
+        gameRef.current.scrollIntoView();
     }
 
     function toConcept() {
@@ -18,7 +18,6 @@ function App() {
     }
 
     function toDownloads() {
-        console.log("hello")
         downloadRef.current.scrollIntoView()
     }
 
@@ -63,11 +62,12 @@ function App() {
                     <span ref={conceptRef} class="mt-10 font-bold text-5xl mb-5">Concept Art</span>
                     <div class="m-10">
                         <div className="grid grid-cols-3 grid-flow-row w-full gap-5 justify-center items-center">
+                            {/*Maps all the concept art names and paths to an image box on the site*/}
                             {conceptArts.map((art, i) => {
                                 return (
                                     <div
                                         class="flex justify-left items-center flex-col rounded border border-gray-300 w-full h-96">
-                                        <img src={conceptArtPath + art} class="w-auto h-4/5 p-5"/>
+                                        <img src={conceptArtPath + art} class="w-auto h-4/5 p-5" alt={art}/>
                                         <div
                                             class="p-5 text-2xl border-t w-full border-t-gray-300 text-black text-center">
                                             {conceptDescriptions[i]}
@@ -83,8 +83,7 @@ function App() {
                     <a href="/workshop/Windows Build.zip"
                        class="mt-5 rounded-full bg-black text-white p-5 flex flex-row items-center justify-center"
                        download>
-                        <img src="/workshop/Windows logo.svg" class="
-                        w-10 h-10"/>
+                        <img src="/workshop/Windows logo.svg" class="w-10 h-10" alt="windows"/>
                         <span class="ml-5">Download</span>
                     </a>
                     <div className="w-4/5 mt-10 border-b border-gray-400"/>
